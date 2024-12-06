@@ -1,0 +1,25 @@
+Alumno: Elmer Laime
+
+Este repositorio contiene 3 notebooks que hacen a la entrega final de la tercera competencia.
+
+Se deben correr en el siguiente orden:
+	1- Ejecutar el script de la notebook "generar_dataset_competencia_03_Elmer_Laime" para generar el dataset con la clase ternaria
+
+	2- Cargar los scripts 909_run_orden227 y 990_workflow_orden227_SEMI_rev24
+	
+	3- Ejecutar el script en R "909_run_orden227" para generar el archivo para Kaggle. Semilla 100019, 
+	corte 11000 envíos (del archivo KA-0021_01_021_r1_11000.csv)
+
+
+4- Principales características del script 990_workflow_orden227_SEMI_rev24:
+
+  4.1 - Cambios en el entrenamiento histórico: 
+      Se excluyen algunos períodos específicos, como 202104, 202103, 202004, y otros (comentados en el código con la razón "variables rotas").
+
+  4.2 - Ajustes en FErf_attributes_base:
+	Numero de iteraciones en la configuración de LightGBM para Random Forest:25
+
+  4.3 - Iteraciones de Optimización Bayesiana: 25
+
+  4.4 - Cambios en las tendencias del Feature Engineering Histórico
+	param_local$Tendencias2$run <- TRUE : lo que habilita la generación y uso de tendencias de segundo orden.
